@@ -2,13 +2,11 @@ import { NavLink } from "react-router-dom";
 
 const SideNavbar = () => {
   const navItems = [
-    { name: "CRUD User", to: "/crud-user" },
-    { name: "CRUD Car Booking Request", to: "/crud-car-booking" },
-    { name: "CRUD Car to Auction", to: "/crud-car-auction" },
-    { name: "CRUD Fuel", to: "/crud-fuel" },
-    { name: "CRUD Cars - For Auction", to: "/crud-auction-cars" },
-    { name: "CRUD Cars Maintenance", to: "/crud-cars-maintenance" },
-    { name: "CRUD Driver", to: "/crud-driver" },
+    { name: "CRUD User", to: "/crud/user" },
+    { name: "CRUD Car Booking", to: "/crud/car-booking" },
+    { name: "CRUD Car", to: "/crud/car" },
+    { name: "Reports Fuel", to: "/reports/fuel" },
+    { name: "Reports Maintenance", to: "/reports/maintenance" },
   ];
 
   return (

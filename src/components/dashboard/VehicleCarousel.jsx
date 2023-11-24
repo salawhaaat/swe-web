@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import VehicleCard from "./VehicleCard";
+import VehicleCard from "../dashboard/VehicleCard";
 
 const VehicleCarousel = () => {
   const settings = {

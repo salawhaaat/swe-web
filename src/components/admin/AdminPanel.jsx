@@ -1,4 +1,4 @@
-import SideNavbar from "../components/SideNavbar";
+import SideNavbar from "../admin/SideNavbar";
 import { Outlet } from "react-router-dom"; // If you're using React Router v6
 
 const AdminPanel = () => {
