@@ -1,5 +1,9 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import Profile from "../components/Profile";
 export default function Navbar() {
+  const [isLoggedIn] = useState(false);
   return (
     <>
       <nav className="md:flex space-x-10">
@@ -10,22 +14,35 @@ export default function Navbar() {
           Home
         </Link>
         <Link
-          to="/vehicle-registration"
+          to="/Auction"
           className="text-base font-medium text-gray-500 hover:text-blue-500"
         >
-          Vehicle Registration
+          Auction
+        </Link>
+        <Link
+          to="/booking"
+          className="text-base font-medium text-gray-500 hover:text-blue-500"
+        >
+          Booking
+        </Link>
+        <Link
+          to="/aboutus"
+          className="text-base font-medium text-gray-500 hover:text-blue-500"
+        >
+          About Us
         </Link>
         {/* Additional navigation links here */}
       </nav>
-
-      <div>
+      {isLoggedIn ? (
+        <Profile />
+      ) : (
         <Link
           to="/login"
-          className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-blue-500"
+          className="text-base font-medium text-gray-500 hover:text-blue-500"
         >
           Login
         </Link>
-      </div>
+      )}
     </>
   );
 }
